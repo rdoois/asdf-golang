@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 🏗️ Create dummy install directories
         run: |
@@ -34,12 +34,12 @@ jobs:
         run: |
           bin/parse-legacy-file test-fixtures/.go-version | grep "^1.17.13"
       - name: Test plugin works to get latest version
-        uses: asdf-vm/actions/plugin-test@v1
+        uses: asdf-vm/actions/plugin-test@v3
         with:
           command: go version
 
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Run ShellSpec
         run: |
@@ -51,7 +51,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Run ShellCheck
         run: shellcheck bin/*

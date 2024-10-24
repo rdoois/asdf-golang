@@ -1,6 +1,6 @@
 # asdf-golang
 
-[![CI](https://github.com/kennyp/asdf-golang/actions/workflows/main.yml/badge.svg)](https://github.com/kennyp/asdf-golang/actions/workflows/main.yml)
+[![CI](https://github.com/asdf-community/asdf-golang/actions/workflows/main.yml/badge.svg)](https://github.com/asdf-community/asdf-golang/actions/workflows/main.yml)
 
 golang plugin for [asdf version manager](https://github.com/asdf-vm/asdf)
 
@@ -18,7 +18,7 @@ golang plugin for [asdf version manager](https://github.com/asdf-vm/asdf)
 ## Install
 
 ```bash
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
 ```
 
 ## Use
@@ -33,7 +33,15 @@ To set `GOROOT` in your shell's initialization add the following:
 `. ~/.asdf/plugins/golang/set-env.zsh`  
 
 **fish shell**  
-`. ~/.asdf/plugins/golang/set-env.fish`  
+`source ~/.asdf/plugins/golang/set-env.fish`  
+
+**nushell shell**
+Add this to your env.nu
+`source ('~/.asdf/plugins/golang/set-env.nu')`
+
+**bash shell**
+Add this to your .bashrc:
+`. ~/.asdf/plugins/golang/set-env.bash` 
 
 ## When using `go get` or `go install`
 
@@ -97,7 +105,7 @@ checksum verified
 
 ## Skipping Checksums
 
-By default we try to verify the checksum of each install but ocassionally [that's not possible](https://github.com/kennyp/asdf-golang/issues/91).
+By default we try to verify the checksum of each install but ocassionally [that's not possible](https://github.com/asdf-community/asdf-golang/issues/91).
 If you need to skip the checksum for some reason just set `ASDF_GOLANG_SKIP_CHECKSUM`.
 
 ## Contributing
